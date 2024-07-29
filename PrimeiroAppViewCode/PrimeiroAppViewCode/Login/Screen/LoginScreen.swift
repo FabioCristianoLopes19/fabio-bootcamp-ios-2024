@@ -7,6 +7,13 @@
 
 import UIKit
 
+//MARK: EXCLUIR REFERENCIA STORYBOARD
+//PASSO A PASSO
+// 1 - Acessar GENERAL do novo projeto e excluir "MAIN" do campo Main Interface
+// 2 - Excluir o arquivo Main.storyboard (selecionar Move to Trash)
+// 3 - Arquivo INFO, pesquisar com Command+F "MAIN"e excluir selecionando o botão (-)
+
+
 // MARK: - RECEITA DE BOLO VIEWCODE
 // PASSO A PASSO
 
