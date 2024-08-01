@@ -12,10 +12,11 @@ import UIKit
 
         @IBOutlet weak var resultLabel: UILabel!
         
-      var resultButton: String
+      var resultTotal: String
 
-      init?(coder: NSCoder, resultButton: String) {
-        self.resultButton = resultButton
+      init?(coder: NSCoder, resultTotal: String) {
+        
+        self.resultTotal = resultTotal
         super.init(coder: coder)
       }
 
@@ -25,7 +26,8 @@ import UIKit
 
       override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = resultButton.capitalized
+          resultLabel.text = resultTotal.capitalized
       }
 
     }
+
