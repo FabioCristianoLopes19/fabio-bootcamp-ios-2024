@@ -58,7 +58,7 @@ func valorIngressoSocio(socio: Bool) -> Int {
     return 500
   }
 }
-//let seForSocio: Int = valorIngressoSocio(socio: true)
+let seForSocio: Int = valorIngressoSocio(socio: true)
 //print (seForSocio)
 
 //Exemplo 4:
@@ -92,6 +92,8 @@ func validaDesconto(valorTotal: String) {
   }
 }
 //validaDesconto(valorTotal: "tststst")
+
+
 
 
 
@@ -141,7 +143,7 @@ func validaDescontoGuardLet(valorTotal: String) {
     print("sem desconto")
   }
 }
-//validaDescontoGuardLet(valorTotal: "fsdfds")
+validaDescontoGuardLet(valorTotal: "fsdfds")
  
  
 // if ternário

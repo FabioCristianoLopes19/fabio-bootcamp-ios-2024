@@ -79,9 +79,9 @@ descricaoTrabalho(nome: "Caio", idade: 22, descricao: "Sou dev iOS em um dos mai
 
 func somaDouble(valor1: Int, valor2: Int, valor3: Double) {
     let somaTotal:Double = Double(valor1) + Double(valor2) + valor3
-//  print("O resultado da soma é \(somaTotal)")
+  print("O resultado da soma é \(somaTotal)")
 }
-somaDouble(valor1: 10, valor2: 20, valor3: 20.5)
+//somaDouble(valor1: 10, valor2: 20, valor3: 20.5)
 
 
 func minhaIdade(_ idade: Int) {
@@ -107,7 +107,7 @@ func meuNomeE() -> String {
     return "Caio Fabrini"
 }
 let meuNomeString: String = meuNomeE()
-print(meuNomeString)
+//print(meuNomeString)
 
 
 

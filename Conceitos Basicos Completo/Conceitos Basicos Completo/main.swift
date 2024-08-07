@@ -7,6 +7,16 @@
 
 import Foundation
 
+//Um playground no Xcode é um ambiente interativo onde você pode escrever e executar código Swift rapidamente.
+
+//MARK: Como criar um novo projeto no XCode
+// 1 - New
+// 2 - Project
+// 3 - macOs
+// 4 - Command Line Tool
+
+//********************************************************************************************************************
+
 // Oque é uma variavel?
 
 // Uma variável é um espaço reservado na memória do computador onde você pode armazenar e modificar valores durante a execução de um programa
@@ -131,7 +141,6 @@ var frase2: Int = 21
 var frase3: String = " anos"
 
 var resultadoConcatenacao: String = frase1 + String(frase2) + frase3
-
 //print(resultadoConcatenacao)
 
 // Interpolação
@@ -180,7 +189,7 @@ minhaIdade = nil
 
 var nomeMae: String? = nil
 //print(nomeMae ?? "")
-
+//print (nomeMae)
 
 var idadeString: String = "22"
 var idadeInt: Int = Int(idadeString) ?? 0
@@ -241,6 +250,7 @@ var number2: Int = 9
 var number3: Int = 4
 var media = (number1 + number2 + number3) / 3
 //print("Média dos três números: \(media)")
+//print (media)
 
 //ou
 
@@ -517,6 +527,7 @@ let dataFormatada = String(dia) + "/" + String(mes) + "/" + String(ano)
 // Duplicar Linha de codigo: CMD + D
 // Selecionar mais de um local ao mesmo tempo: Control + Shift
 // Rodar o buid: CMR + R
+// Compilar o projeto: CMR + B
 // Como comentar rapido uma linha: CMD + /
 // Como comentar rapido varias linha: Selecione tudo oque você quer comentar e pressione -> CMD + /
 

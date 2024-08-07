@@ -27,29 +27,29 @@ import Foundation
 // Na programação a primeira posição não é o 1 e sim o 0!!
 
 //                                0         1        2          3       4         5         6
-//var diasDaSemana: [String] = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
-//
-//let nome: String = "Meu nome é Caio"
-//var listaNotas: [Double] = [10, 5.5, 9.8, 3, 2, 10, 8.5]
-//let livrosQueLi: [String] = ["Diario de um banana", "Diario de um banana 2"]
-//var listaNomes: [String] = ["Caio", "Gabriela", "Giulia", "Ramon"]
-//var listaVazia: [Int] = []
+var diasDaSemana: [String] = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+
+let nome: String = "Meu nome é Caio"
+var listaNotas: [Double] = [10, 5.5, 9.8, 3, 2, 10, 8.5]
+let livrosQueLi: [String] = ["Diario de um banana", "Diario de um banana 2"]
+var listaNomes: [String] = ["Caio", "Gabriela", "Giulia", "Ramon"]
+var listaVazia: [Int] = []
 
 
 // Para acessar um valor de um array utilizamos o INDEX DO ARRAY
 
-//var dia: String = diasDaSemana[5]
+var dia: String = diasDaSemana[5]
 //print("Hoje é: \(dia)")
 
-//var nota: Double = listaNotas[1]
+var nota: Double = listaNotas[1]
 //print("Sua nota é: \(nota)")
 
 // Verificar quantos ITENS EXISTE EM UM ARRAY
-//let quantidadeTotalDeAlunos: Int = listaNomes.count
+let quantidadeTotalDeAlunos: Int = listaNomes.count
 //print(quantidadeTotalDeAlunos)
 
 // Verificar se a lista é vazia
-//let eVazio: Bool = listaVazia.isEmpty
+let eVazio: Bool = listaVazia.isEmpty
 //print(eVazio)
 //print(listaNomes.isEmpty)
 
@@ -57,12 +57,12 @@ import Foundation
 // OBS: Para adicionar um item no seu array ele DEVE SER DA MESMA TIPAGEM DO ARRAY!!!!!
 // Toda a vez que utilizamos o append, o novo elemento é adicionado sempre ao final da lista
 
-//listaNomes.append("Thiago")
-//listaNomes.append("Fabio")
-//listaNomes.append("Gabriela")
+listaNomes.append("Thiago")
+listaNomes.append("Fabio")
+listaNomes.append("Gabriela")
 //print(listaNomes)
 
-//listaNotas.append(1.5)
+listaNotas.append(1.5)
 //print(listaNotas)
 
 // Para deletar um elemento do array utilizamos a propriedade remove, e temos 4 formas SIMPLES:
@@ -173,11 +173,11 @@ import Foundation
 // O While a primeira coisa que ele faz é verificar se a condição que está entre a palavra while e a chave é verdadeira. Se a condição for verdadeira ele entra no bloco de codigo e depois volta a repetir. Ele encerra a repetição apenas no momento em que a validação se torna falsa
 
 //Exemplo 1:
-//var idade: Int = 10
-//while idade <= 12 {
+var idade: Int = 10
+while idade <= 12 {
 //  print("A idade atual é de: \(idade)")
-//  idade = idade + 1
-//}
+  idade = idade + 1
+}
 //print("final da execução")
 
 
@@ -185,14 +185,14 @@ import Foundation
 // O 'repeat-while' é uma variação do loop 'while' que executa o bloco de código uma vez antes de verificar a condição no final do bloco.
 // O repeat é igual o While, porem ele apriori executa e DEPOIS verifica se tem que repetir de novo
 
-//var indexRepeat: Int = 110
-//
-//repeat {
+var indexRepeat: Int = 110
+
+repeat {
 //  print("Valor: \(indexRepeat)")
-//  // += significa (indexRepeat = indexRepeat + 1)
-//  // indexRepeat = indexRepeat + 1
-//  indexRepeat += 1
-//} while indexRepeat <= 110
+//   += significa (indexRepeat = indexRepeat + 1)
+//   indexRepeat = indexRepeat + 1
+  indexRepeat += 1
+} while indexRepeat <= 110
 
 
 //var indexRepeat: Int = 100
@@ -205,12 +205,12 @@ import Foundation
 //} while indexRepeat <= 110
 
 
-// MARK: For-In
+// MARK: For-In (entre)
 // O loop 'for-in' itera sobre uma sequência, como um intervalo de números, e executa um conjunto de instruções para cada elemento na sequência.
 
-//for value in 100...105 {
+for value in 100...105 {
 //  print("O valor atual é de: \(value)")
-//}
+}
 
 // MARK: - Uso de For-In com Arrays/ Dicionario
 // Arrays em Swift são coleções ordenadas de elementos. O loop 'for-in' permite iterar sobre cada elemento de um array de maneira simples e direta.
@@ -225,7 +225,7 @@ import Foundation
 //var listaNomeAlunosAprovados: [String] = []
 //
 //for aluno in listaAlunos {
-//  //   nota   for maior ou igual a 7
+////     nota   for maior ou igual a 7
 //  if aluno.value >= 7 {
 //    listaNomeAlunosAprovados.append(aluno.key)
 //  }
@@ -237,27 +237,28 @@ import Foundation
 // Usando a função 'enumerated()' para acessar tanto o índice quanto o valor de cada elemento do array.
 // 'enumerated()' transforma o array em uma sequência de pares (índice, valor).
 
+var listaAnotacoes: [String] = ["Abastecer carro", "Colocar ração para o Ayron", "Pagar conta de energia", "Responder alunos"]
 
-//for (index, anotacao) in listaAnotacoes.enumerated() {
+for (index, anotacao) in listaAnotacoes.enumerated() {
 //  print("A posição é: \(index) e a sua anotação é: \(anotacao)")
-//}
+}
 
-//for (index, anotacao) in listaAnotacoes.enumerated() {
-//  if anotacao == "Abastecer carro" {
-//       listaAnotacoes.remove(at: index)
-//       listaAnotacoes.append("Conferir pneus")
+for (index, anotacao) in listaAnotacoes.enumerated() {
+  if anotacao == "Abastecer carro" {
+       listaAnotacoes.remove(at: index)
+       listaAnotacoes.append("Conferir pneus")
 
-    // utilizamos o break no caso de existir apenas um unico item na lista. Com isso quando entrar na validação ele não precisa mais repetir para buscar outro valor
-    // pois sabemos que ele não vai encontrar. Sendo assim, o break anula o loop
-//       break
-//  }
-//}
+//     utilizamos o break no caso de existir apenas um unico item na lista. Com isso quando entrar na validação ele não precisa mais repetir para buscar outro valor
+//     pois sabemos que ele não vai encontrar. Sendo assim, o break anula o loop
+       break
+  }
+}
 
 //print(listaAnotacoes)
 
 // Como reverter o array
 //print(listaAnotacoes)  // ["Colocar ração para o Ayron", "Pagar conta de energia", "Responder alunos", "Conferir pneus"]
-//listaAnotacoes.reverse()
+listaAnotacoes.reverse()
 //print(listaAnotacoes) //  ["Conferir pneus", "Responder alunos", "Pagar conta de energia", "Colocar ração para o Ayron"]
 
 
@@ -327,4 +328,4 @@ repeat {
     count += 1
 } while(count < 5)
 
-print(soma)
+//print(soma)
