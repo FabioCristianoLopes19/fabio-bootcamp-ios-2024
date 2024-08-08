@@ -9,34 +9,34 @@ import UIKit
 
 //MARK: EXCLUIR REFERENCIA STORYBOARD (MAIN)
 //PASSO A PASSO
-// 1 - Acessar GENERAL do novo projeto e excluir "MAIN" do campo Main Interface
-// 2 - Excluir o arquivo Main.storyboard (selecionar Move to Trash)
-// 3 - Arquivo INFO, pesquisar com Command+F "MAIN"e excluir selecionando o botão (-)
-
 // 1 - Excluir o arquivo Main.storyboard (selecionar Move to Trash)
 // 2 - Arquivo INFO, pesquisar com Command+F "MAIN" vai apresentar a opção Storyboard Name e excluir selecionando o botão (-)
 // 3 - Acessar Pasta Raiz ou Xcode Project e aba Build Setting - selecionar as opções All e Combined e no filtro escrever MAIN e vai apresentar o campo UIkit Main StoryBoard File Base Name - fazendo duplo clique e vai abrir uma caixa e apagar o MAIN.
-// 4 - Depois do passo a passo acima devemos identificar em "qual pagina devemos iniciar" nas classes AppDelegate e SceneDelegate
 //
-//AppDelegate é responsavel pelo ciclo de vida da aplicação (exemplo não tirar print da tela)
-//SceneDelegate é responsavel pela visualização do aplicativo (exemplo modo dark ou claro do app)
-//
-//Exemplo padrão:
-//class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//
-//  var window: UIWindow?
-//
+// 4 - SceneDelegate (é responsavel pela visualização do aplicativo (exemplo modo dark ou claro do app))
+// excluir: guard let _ = (scene as? UIWindowScene) else { return }
+// incluir: configurationViewCode (Create Code Snippet)
+//Exemplo abaixo:
 //func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 //  guard let windowScene = (scene as? UIWindowScene) else { return }
 //  let window = UIWindow(windowScene: windowScene)
-//  let viewController = ViewController() ** essa linha devemos mudar o nome da ViewController **
-//  let nav = UINavigationController(rootViewController: loginVC)
-//  window.rootViewController = nav
+//  let vc = ViewController() /*** essa linha devemos mudar o nome da ViewController ***/
+//  window.rootViewController = vc
 //  window.makeKeyAndVisible()
 //  self.window = window
 //}
-
-
+//
+// 5 - Na ViewController incluir colocar cor de fundo na tela:
+//     view.backgroundColor = .red
+// Exemplo abaixo:
+//    override func viewDidLoad() {
+//     super.viewDidLoad()
+//     view.backgroundColor = .red
+//}
+// 6 - CMR + R = Build pra verificar se deu certo.
+//
+//
+//AppDelegate é responsavel pelo ciclo de vida da aplicação (exemplo não tirar print da tela)
 // MARK: - RECEITA DE BOLO VIEWCODE
 // PASSO A PASSO
 

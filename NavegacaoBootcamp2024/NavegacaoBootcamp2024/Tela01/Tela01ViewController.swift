@@ -11,9 +11,10 @@ import UIKit
 
 // Criar arquivo Storyboard -> NovaTelaViewController
 // Criar arquivo Swift com o mesmo nome do storyboard
-// Colocar no Storyboard a classe de referencia -> link com seta
-// Colocar no Storyboard para que seja is initial view controller (setinha que fica ao lado do simulador)
-// Colocar identifier com o mesmo nome da classe
+//
+// Colocar no Storyboard a classe de referencia -> link com seta (Embed In)
+// Colocar no Storyboard para que seja is initial view controller (Na imagem de filtro) setinha que fica ao lado do simulador)
+// Colocar identifier com o mesmo nome da classe (Imagem de cartão no campo Storyboard ID)
 
 
 // MARK: - Navegação Modal
