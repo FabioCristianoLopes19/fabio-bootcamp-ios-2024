@@ -50,9 +50,9 @@ import UIKit
 // required init?(coder: NSCoder) {
 //  fatalError("init(coder:) has not been implemented")
 // }
-// 3 - Criar e configurar elemento (NÃO SE ESQUEÇA DO translatesAutoresizingMaskIntoConstraints = false)
-// 4 - Adicionar elemento (não se esqueça de chamar função)
-// 5 - Configurar constraints (não se esqueça de chamar função)
+// 3 - Criar e configurar elemento (NÃO SE ESQUEÇA DO translatesAutoresizingMaskIntoConstraints = false (não permitir o alinhamento "automático")
+// 4 - Adicionar elemento (não se esqueça de chamar função dentro do construtor "init" , no addElements e configContraints)
+// 5 - Configurar constraints (não se esqueça de chamar função dentro do construtor "init" , no addElements e configContraints)
 // 6 - Chamar no LoadView
 // 7 - Corre pro abraço!!!
 
