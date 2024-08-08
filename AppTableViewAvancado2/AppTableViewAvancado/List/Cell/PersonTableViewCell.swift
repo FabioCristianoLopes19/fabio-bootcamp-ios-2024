@@ -2,7 +2,7 @@
 //  PersonTableViewCell.swift
 //  AppTableViewAvancado
 //
-//  Created by Caio Fabrini on 31/07/24.
+//  Created by Fabio Cristiano Lopes on 31/07/24.
 //
 
 import UIKit
