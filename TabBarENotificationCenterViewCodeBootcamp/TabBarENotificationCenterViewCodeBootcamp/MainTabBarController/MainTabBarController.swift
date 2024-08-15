@@ -1,24 +1,13 @@
 //
 //  ViewController.swift
-//  TabBarENotificationCenterViewCodeBootcampIos
+//  TabBarENotificationCenterViewCodeBootcamp
 //
 //  Created by Fabio Cristiano Lopes on 05/08/24.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-       
-    }
-    
-}
-
 class MainTabBarController: UITabBarController {
-
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,6 +17,7 @@ class MainTabBarController: UITabBarController {
     let tela03 = createNavController(viewController: Tela03VC(), title: "Tela 03", imageName: "star")
 
     viewControllers = [tela01, tela02, tela03]
+    customizeTabBarAppearance()
   }
 
   private func createNavController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
@@ -37,30 +27,14 @@ class MainTabBarController: UITabBarController {
     return navController
   }
 
-}
-class Tela01VC: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .cyan
+  private func customizeTabBarAppearance() {
+    tabBar.tintColor = .black // cor dos itens fica black quando selecionado
+    tabBar.unselectedItemTintColor = .lightGray // cor dos itens fica lightGray quando não está selecionado
+    tabBar.backgroundColor = .white // cor de fundo
+    tabBar.isTranslucent = false // serve para não deixar transparente o fundo quando trabalhamos com lista
+    tabBar.layer.borderColor = UIColor.lightGray.cgColor // cor da borda
+    tabBar.layer.borderWidth = 0.5 // espessura da borda
   }
 
 }
 
-class Tela02VC: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .green
-  }
-
-}
-
-class Tela03VC: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .orange
-  }
-
-}
