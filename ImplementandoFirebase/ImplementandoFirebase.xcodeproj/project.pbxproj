@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0369EA4B2C6FD8E300CE6439 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0369EA4A2C6FD8E300CE6439 /* GoogleService-Info.plist */; };
 		344667642C6AE84500A2930A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667632C6AE84500A2930A /* AppDelegate.swift */; };
 		344667662C6AE84500A2930A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667652C6AE84500A2930A /* SceneDelegate.swift */; };
 		344667682C6AE84500A2930A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667672C6AE84500A2930A /* LoginViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0369EA4A2C6FD8E300CE6439 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		344667602C6AE84500A2930A /* ImplementandoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImplementandoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		344667632C6AE84500A2930A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		344667652C6AE84500A2930A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				344667652C6AE84500A2930A /* SceneDelegate.swift */,
 				3446676C2C6AE84800A2930A /* Assets.xcassets */,
 				3446676E2C6AE84800A2930A /* LaunchScreen.storyboard */,
+				0369EA4A2C6FD8E300CE6439 /* GoogleService-Info.plist */,
 				344667712C6AE84800A2930A /* Info.plist */,
 			);
 			path = ImplementandoFirebase;
@@ -143,6 +146,7 @@
 			files = (
 				3446676D2C6AE84800A2930A /* Assets.xcassets in Resources */,
 				344667702C6AE84800A2930A /* Base in Resources */,
+				0369EA4B2C6FD8E300CE6439 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +316,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bootcampIOS.ImplementandoFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = bootcampIOS.ImplementandoFirebaseFabioCristianoLopes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -343,7 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bootcampIOS.ImplementandoFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = bootcampIOS.ImplementandoFirebaseFabioCristianoLopes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
