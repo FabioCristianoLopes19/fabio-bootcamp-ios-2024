@@ -19,8 +19,8 @@ import UIKit
 // 3 - Acessar Pasta Raiz ou Xcode Project e aba Build Setting - selecionar as opções All e Combined e no filtro escrever MAIN e vai apresentar o campo UIkit Main StoryBoard File Base Name - fazendo duplo clique e vai abrir uma caixa e apagar o MAIN.
 // 4 - Depois do passo a passo acima devemos identificar em "qual pagina devemos iniciar" nas classes AppDelegate e SceneDelegate
 //
-//AppDelegate é responsavel pelo ciclo de vida da aplicação (exemplo não tirar print da tela)
-//SceneDelegate é responsavel pela visualização do aplicativo (exemplo modo dark ou claro do app)
+//AppDelegate é responsavel pelo ciclo de vida e configuração do aplicativo. (exemplo não tirar print da tela)
+//SceneDelegate é responsavel pelo o que é mostrado na tela, e com ele nos podemos manipular e gerenciar a forma como o aplicativo é exibido. //(exemplo modo dark ou claro do app)
 //
 //Exemplo padrão:
 //class SceneDelegate: UIResponder, UIWindowSceneDelegate {
