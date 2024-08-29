@@ -80,4 +80,3 @@ class Loading {
     containerView.removeFromSuperview()
   }
 }
-import Foundation
