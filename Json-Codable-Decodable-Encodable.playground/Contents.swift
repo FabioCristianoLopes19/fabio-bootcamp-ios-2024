@@ -328,6 +328,11 @@ do {
   print("Error ao codificar o JSON: \(error.localizedDescription)")
 }
 
+// MARK: Codable
+
+// O Codable ele é um Typealias que é a junção do Decodable + Encodable
+// No nosso dia a dia recomendamos utilizar apenas ele!!
+// Pois ele já é ambos ;)
 
 // MARK: - Desafios
 
@@ -339,6 +344,33 @@ do {
 //    "releaseYear": 2010
 //}
 
+struct Movie: Decodable {
+    var title: String
+    var director: String
+    var releaseYear: Int
+}
+
+var jsonStringMovie = """
+{
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "releaseYear": 2010
+}
+"""
+
+if let jsonData = jsonStringMovie.data(using: .utf8) {
+  do {
+    let movie = try JSONDecoder().decode(Movie.self, from: jsonData)
+    print("Filme Decodificado com sucesso!!")
+    print(movie.title)
+    print(movie.director)
+    print(movie.releaseYear)
+  } catch  {
+    // Ele tenta (try) decodificar, se caso não conseguir, ele cai no caso do catch
+    print("Error ao decodificar o JSON: \(error.localizedDescription)")
+  }
+}
+
 // 2 - Faça o Encodable desse modelo
 
 struct Student: Encodable {
@@ -347,23 +379,81 @@ struct Student: Encodable {
     var grades: [Int]
 }
 
+  enum CodingKeys: String, CodingKey {
+    case name
+    case age
+    case grades
+  }
+
+let studentOne = Student(name: "Fabio", age: 41, grades: [10, 9, 8])
+
+do {
+  let encoder = JSONEncoder()
+  encoder.outputFormatting = .prettyPrinted // facilita a leitura
+  let jsonData = try encoder.encode(studentOne)
+  if let jsonString = String(data: jsonData, encoding: .utf8) {
+    print(jsonString)
+  }
+} catch {
+  print("Error ao codificar o JSON: \(error.localizedDescription)")
+}
+
+
+
+
+
+
 
 // 3 - Faça o Decode funcionar
 
 //OBS: Você recebeu um JSON de uma API que contém detalhes sobre um veículo. O JSON tem 10 campos, mas você precisa extrair e usar apenas 4 deles: model, make, year, e color. Durante a decodificação, você encontrará alguns erros intencionais que precisam ser corrigidos.
 
+//struct Vehicle: Decodable {
+//    var model: String
+//    var make: String
+//    var year: Int
+//    var color: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case model = "Model"
+//        case make
+//        case year = "Year"
+//        case color = "colour"
+//    }
+//}
+//
+//let jsonStringVehicle = """
+//{
+//    "model": "Explorer",
+//    "make": "Ford",
+//    "year": "2020",
+//    "color": "Blue",
+//    "engine": "3.5L V6",
+//    "seats": 7,
+//    "type": "SUV",
+//    "milage": "12000",
+//    "price": "35000",
+//    "airConditioned": true
+//}
+//"""
+//
+//if let jsonAnimal = jsonStringAnimal.data(using: .utf8) {
+//  do {
+//    let decoder = JSONDecoder()
+//    let vehicle = try decoder.decode([Vehicle].self, from: jsonAnimal)
+//    // realize o print de todas as propriedades
+//  } catch {
+//    print("Erro ao decodificar o Animal: \(error)")
+//  }
+//}
+
+
+//RESPOSTA:
 struct Vehicle: Decodable {
     var model: String
     var make: String
-    var year: Int
+    var year: String //alterei para String
     var color: String
-
-    enum CodingKeys: String, CodingKey {
-        case model = "Model"
-        case make
-        case year = "Year"
-        case color = "colour"
-    }
 }
 
 let jsonStringVehicle = """
@@ -381,12 +471,16 @@ let jsonStringVehicle = """
 }
 """
 
-if let jsonAnimal = jsonStringAnimal.data(using: .utf8) {
+if let jsonVehicle = jsonStringVehicle.data(using: .utf8) {
   do {
     let decoder = JSONDecoder()
-    let vehicle = try decoder.decode([Vehicle].self, from: jsonAnimal)
-    // realize o print de todas as propriedades
+    let vehicle = try decoder.decode(Vehicle.self, from: jsonVehicle)
+      print("Veiculo Decodificado com sucesso!!")
+      print(vehicle.model)
+      print(vehicle.make)
+      print(vehicle.year)
+      print(vehicle.color)
   } catch {
-    print("Erro ao decodificar o Animal: \(error)")
+    print("Erro ao decodificar o Veiculo: \(error)")
   }
 }
