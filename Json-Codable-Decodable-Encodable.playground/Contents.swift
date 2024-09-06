@@ -484,3 +484,145 @@ if let jsonVehicle = jsonStringVehicle.data(using: .utf8) {
     print("Erro ao decodificar o Veiculo: \(error)")
   }
 }
+
+
+// - Exercício 4
+
+// Realize o decodable do seguinte json
+
+struct MovieData: Codable {
+  var movie: [Movie]
+}
+
+struct Movie: Codable {
+  var title: String?
+  var year: String
+  var genre: String
+}
+
+let jsonStringMovie = """
+{
+  "movie": [
+      {"title": "Harry Potter", "year": "2010", "genre": "Ação"},
+      {"title": null, "year": "1999", "genre": "Ficção científica"}
+  ]
+}
+"""
+
+if let jsonData = jsonStringMovie.data(using: .utf8) {
+  do {
+    let movie = try JSONDecoder().decode(MovieData.self, from: jsonData)
+    print("Movie Decodificado com sucesso!!")
+    print(movie.movie)
+  } catch  {
+    // Ele tenta (try) decodificar, se caso não conseguir, ele cai no caso do catch
+    print("Error ao decodificar o JSON: \(error.localizedDescription)")
+  }
+}
+
+
+
+// - Exercício 5
+
+// Realize o decodable e o encodable do seguinte json
+// OBS: Esse json não parece estar correto...corrija ele
+
+struct Course: Codable {
+  var courseName: String
+  var instructors: [Instructor]
+  var price: String
+}
+
+struct Instructor: Codable {
+  var firstName: String
+  var lastName: String
+}
+
+
+let jsonStringCourse = """
+{
+  "courseName": "Swift Advanced",
+  "instructors": [
+    {
+      "firstName": "Caio",
+      "lastName": "Fabrini"
+    },
+    {
+      "firstName": "Reinaldo",
+      "lastName": "Neto"
+    }
+  ],
+  "price": "Free"
+}
+"""
+
+if let jsonData = jsonStringCourse.data(using: .utf8) {
+  do {
+    let decoder = JSONDecoder()
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
+    let course = try decoder.decode(Course.self, from: jsonData)
+    print("Decode feito com sucesso!")
+    let jsonData = try encoder.encode(course)
+    print("Encode feito com sucesso!")
+    if let jsonString = String(data: jsonData, encoding: .utf8) {
+      print(jsonString)
+    }
+  } catch {
+   print("Deu ruimmm")
+  }
+}
+
+// - Exercício 6
+// Realize o decodable e o encodable do seguinte json
+
+struct Person: Codable {
+  var id: Int
+  var name: String
+  var email: String?
+  var phone: String?
+}
+
+let jsonStringPerson = """
+[
+    {
+        "id": 1,
+        "name": "Paula Rodrigues",
+        "email": "paula@hotmail.com",
+        "phone": "123-456-7890"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": null,
+        "phone": "123-456-7890"
+    },
+    {
+        "id": 3,
+        "name": "Alice Costa",
+        "email": "alice@hotmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Pedro Morais",
+        "phone": "123-456-7890"
+    }
+]
+"""
+
+if let jsonData = jsonStringPerson.data(using: .utf8) {
+  do {
+    let decoder = JSONDecoder()
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
+    let person = try decoder.decode([Person].self, from: jsonData)
+    print("Decode Person feito com sucesso!")
+    let jsonData = try encoder.encode(person)
+    print("Encode Person feito com sucesso!")
+    if let jsonString = String(data: jsonData, encoding: .utf8) {
+      print(jsonString)
+    }
+  } catch {
+   print("Deu ruimmm Person")
+  }
+}
