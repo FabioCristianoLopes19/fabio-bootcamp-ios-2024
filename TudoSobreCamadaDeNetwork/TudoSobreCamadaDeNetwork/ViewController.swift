@@ -169,9 +169,84 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+//    getListUsers()
+//    getUser(id: 1)
+//    createUser(name: "Caio", job: "iOS")
+//    updateUserParameters(name: "Caio", job: "iOS", id: 1)
+//    updateUserEncodable(user: UpdateUserRequest(name: "Caio", job: "iOS Developer"), id: 100)
+//    deleteUser(id: 100)
   }
 
+  func getListUsers() {
+    Service.fetchListUsers { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
 
+  func getUser(id: Int) {
+    Service.fetchUser(id: id) { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
+
+  func createUser(name: String, job: String) {
+    Service.createUser(name: name, job: job) { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
+
+  func updateUserParameters(name: String, job: String, id: Int) {
+    Service.updateUserParameters(name: name, job: job, id: id) { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
+
+  func updateUserEncodable(user: UpdateUserRequest, id: Int) {
+    Service.updateUserEncodable(user: user, id: id) { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
+
+  func deleteUser(id: Int) {
+    Service.deleteUser(id: id) { result in
+      switch result {
+      case .success:
+        print("Usuário deletado com sucesso!")
+      case .failure(let failure):
+        print(failure.message)
+        print(failure.statusCode ?? 0)
+      }
+    }
+  }
 }
 
