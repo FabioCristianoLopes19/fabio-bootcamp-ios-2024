@@ -13,6 +13,10 @@
 		037D20B82C7A9142000252BB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D20B72C7A9142000252BB /* RegisterViewModel.swift */; };
 		037D20BB2C7A9162000252BB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D20BA2C7A9162000252BB /* RegisterScreen.swift */; };
 		037D20BD2C7A91F0000252BB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D20BC2C7A91F0000252BB /* LoginViewModel.swift */; };
+		03B2FB0B2C9501C400A9DA06 /* LoadingShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2FB0A2C9501C400A9DA06 /* LoadingShared.swift */; };
+		03B2FB0E2C9509B300A9DA06 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 03B2FB0D2C9509B300A9DA06 /* Lottie */; };
+		03B2FB112C950B9500A9DA06 /* LoadingLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2FB102C950B9500A9DA06 /* LoadingLottie.swift */; };
+		03B2FB132C950C2000A9DA06 /* loading_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 03B2FB122C950C2000A9DA06 /* loading_animation.json */; };
 		344667642C6AE84500A2930A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667632C6AE84500A2930A /* AppDelegate.swift */; };
 		344667662C6AE84500A2930A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667652C6AE84500A2930A /* SceneDelegate.swift */; };
 		344667682C6AE84500A2930A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344667672C6AE84500A2930A /* LoginViewController.swift */; };
@@ -29,6 +33,9 @@
 		037D20B72C7A9142000252BB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		037D20BA2C7A9162000252BB /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		037D20BC2C7A91F0000252BB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		03B2FB0A2C9501C400A9DA06 /* LoadingShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShared.swift; sourceTree = "<group>"; };
+		03B2FB102C950B9500A9DA06 /* LoadingLottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLottie.swift; sourceTree = "<group>"; };
+		03B2FB122C950C2000A9DA06 /* loading_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_animation.json; sourceTree = "<group>"; };
 		2AF557B60DED0A1952BE3440 /* Pods-ImplementandoFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImplementandoFirebase.debug.xcconfig"; path = "Target Support Files/Pods-ImplementandoFirebase/Pods-ImplementandoFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		344667602C6AE84500A2930A /* ImplementandoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImplementandoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		344667632C6AE84500A2930A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7AB131DE0CB140B10F33B2 /* Pods_ImplementandoFirebase.framework in Frameworks */,
+				03B2FB0E2C9509B300A9DA06 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				037D20B22C7A90D6000252BB /* Loading.swift */,
+				03B2FB0A2C9501C400A9DA06 /* LoadingShared.swift */,
+				03B2FB102C950B9500A9DA06 /* LoadingLottie.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -106,6 +116,7 @@
 				344667772C6AE88E00A2930A /* Login */,
 				344667632C6AE84500A2930A /* AppDelegate.swift */,
 				344667652C6AE84500A2930A /* SceneDelegate.swift */,
+				03B2FB122C950C2000A9DA06 /* loading_animation.json */,
 				3446676C2C6AE84800A2930A /* Assets.xcassets */,
 				3446676E2C6AE84800A2930A /* LaunchScreen.storyboard */,
 				0369EA4A2C6FD8E300CE6439 /* GoogleService-Info.plist */,
@@ -167,6 +178,9 @@
 			dependencies = (
 			);
 			name = ImplementandoFirebase;
+			packageProductDependencies = (
+				03B2FB0D2C9509B300A9DA06 /* Lottie */,
+			);
 			productName = ImplementandoFirebase;
 			productReference = 344667602C6AE84500A2930A /* ImplementandoFirebase.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 344667572C6AE84500A2930A;
+			packageReferences = (
+				03B2FB0C2C9509B300A9DA06 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 344667612C6AE84500A2930A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,6 +229,7 @@
 				3446676D2C6AE84800A2930A /* Assets.xcassets in Resources */,
 				344667702C6AE84800A2930A /* Base in Resources */,
 				0369EA4B2C6FD8E300CE6439 /* GoogleService-Info.plist in Resources */,
+				03B2FB132C950C2000A9DA06 /* loading_animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +288,11 @@
 				037D20B32C7A90D6000252BB /* Loading.swift in Sources */,
 				037D20BB2C7A9162000252BB /* RegisterScreen.swift in Sources */,
 				037D20B62C7A912E000252BB /* RegisterViewController.swift in Sources */,
+				03B2FB112C950B9500A9DA06 /* LoadingLottie.swift in Sources */,
 				344667642C6AE84500A2930A /* AppDelegate.swift in Sources */,
 				344667662C6AE84500A2930A /* SceneDelegate.swift in Sources */,
 				037D20BD2C7A91F0000252BB /* LoginViewModel.swift in Sources */,
+				03B2FB0B2C9501C400A9DA06 /* LoadingShared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +517,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03B2FB0C2C9509B300A9DA06 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03B2FB0D2C9509B300A9DA06 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B2FB0C2C9509B300A9DA06 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 344667582C6AE84500A2930A /* Project object */;
 }
