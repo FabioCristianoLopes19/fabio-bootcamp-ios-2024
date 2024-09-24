@@ -167,6 +167,7 @@ let bodyParametersParaPut = """
 
 class ViewController: UIViewController {
 
+  // MARK: - ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
 //    getListUsers()
@@ -175,6 +176,11 @@ class ViewController: UIViewController {
 //    updateUserParameters(name: "Caio", job: "iOS", id: 1)
 //    updateUserEncodable(user: UpdateUserRequest(name: "Caio", job: "iOS Developer"), id: 100)
 //    deleteUser(id: 100)
+
+    // APIClient
+    getListUsersAPIClient()
+//    createUserAPIClient(name: "Caio", job: "Developer iOS")
+
   }
 
   func getListUsers() {
@@ -248,5 +254,34 @@ class ViewController: UIViewController {
       }
     }
   }
+
+
+// MARK: APIClient
+
+  func getListUsersAPIClient() {
+    GlobalService.fetchListUsers { result in
+      switch result {
+      case .success(let success):
+        print(success)
+      case .failure(let failure):
+        print(failure.errorDescription ?? "")
+      }
+    }
+  }
+
+  func createUserAPIClient(name: String, job: String) {
+    GlobalService.createUser(name: name, job: job) { result in
+      switch result {
+      case .success:
+        print("Usuário criado com sucesso!")
+      case .failure(let failure):
+        print(failure.errorDescription ?? "")
+      }
+    }
+  }
+
+
+
+
 }
 

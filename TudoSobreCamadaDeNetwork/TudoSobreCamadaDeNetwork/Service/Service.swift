@@ -318,4 +318,3 @@ class Service {
     task.resume()
   }
 }
-

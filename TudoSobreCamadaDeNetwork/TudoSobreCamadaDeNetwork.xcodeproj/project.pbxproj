@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03230D042CA273DD00544858 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D032CA273DD00544858 /* NetworkError.swift */; };
+		03230D072CA273FA00544858 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D062CA273FA00544858 /* HTTPMethod.swift */; };
+		03230D0A2CA2742000544858 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D092CA2742000544858 /* Parameters.swift */; };
+		03230D0D2CA2744100544858 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D0C2CA2744100544858 /* APIRequest.swift */; };
+		03230D102CA2745D00544858 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D0F2CA2745D00544858 /* RequestBuilder.swift */; };
+		03230D132CA2747C00544858 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D122CA2747C00544858 /* EmptyResponse.swift */; };
+		03230D162CA2749800544858 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D152CA2749800544858 /* NetworkLogger.swift */; };
+		03230D192CA274B400544858 /* LocalFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D182CA274B400544858 /* LocalFileReader.swift */; };
+		03230D1C2CA274DB00544858 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D1B2CA274DB00544858 /* APIClient.swift */; };
+		03230D1E2CA274EB00544858 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D1D2CA274EB00544858 /* HTTPClient.swift */; };
+		03230D202CA2750300544858 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D1F2CA2750300544858 /* Documentation.swift */; };
+		03230D222CA2763400544858 /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03230D212CA2763400544858 /* GlobalService.swift */; };
 		03B2FAFF2C94FB2800A9DA06 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2FAFE2C94FB2800A9DA06 /* Service.swift */; };
 		03B2FB012C94FB8F00A9DA06 /* UpdateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2FB002C94FB8F00A9DA06 /* UpdateUserRequest.swift */; };
 		03B2FB032C94FBA100A9DA06 /* UserUpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2FB022C94FBA100A9DA06 /* UserUpdateResponse.swift */; };
@@ -22,6 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03230D032CA273DD00544858 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		03230D062CA273FA00544858 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		03230D092CA2742000544858 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		03230D0C2CA2744100544858 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		03230D0F2CA2745D00544858 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		03230D122CA2747C00544858 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		03230D152CA2749800544858 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		03230D182CA274B400544858 /* LocalFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileReader.swift; sourceTree = "<group>"; };
+		03230D1B2CA274DB00544858 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		03230D1D2CA274EB00544858 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		03230D1F2CA2750300544858 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
+		03230D212CA2763400544858 /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
 		03B2FAFE2C94FB2800A9DA06 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		03B2FB002C94FB8F00A9DA06 /* UpdateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequest.swift; sourceTree = "<group>"; };
 		03B2FB022C94FBA100A9DA06 /* UserUpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateResponse.swift; sourceTree = "<group>"; };
@@ -49,10 +73,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03230D002CA2739500544858 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				03230D1F2CA2750300544858 /* Documentation.swift */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		03230D012CA273A100544858 /* NewService */ = {
+			isa = PBXGroup;
+			children = (
+				03230D1A2CA274C900544858 /* APIClient */,
+				03230D172CA274A700544858 /* LocalFileReader */,
+				03230D142CA2748B00544858 /* NetworkLogger */,
+				03230D112CA2746600544858 /* EmptyResponse */,
+				03230D0E2CA2744800544858 /* RequestBuilder */,
+				03230D0B2CA2742F00544858 /* APIRequest */,
+				03230D082CA2741000544858 /* Parameters */,
+				03230D052CA273EC00544858 /* HTTPMethod */,
+				03230D022CA273C700544858 /* NetworkError */,
+			);
+			path = NewService;
+			sourceTree = "<group>";
+		};
+		03230D022CA273C700544858 /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				03230D032CA273DD00544858 /* NetworkError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		03230D052CA273EC00544858 /* HTTPMethod */ = {
+			isa = PBXGroup;
+			children = (
+				03230D062CA273FA00544858 /* HTTPMethod.swift */,
+			);
+			path = HTTPMethod;
+			sourceTree = "<group>";
+		};
+		03230D082CA2741000544858 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				03230D092CA2742000544858 /* Parameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		03230D0B2CA2742F00544858 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				03230D0C2CA2744100544858 /* APIRequest.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		03230D0E2CA2744800544858 /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				03230D0F2CA2745D00544858 /* RequestBuilder.swift */,
+			);
+			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
+		03230D112CA2746600544858 /* EmptyResponse */ = {
+			isa = PBXGroup;
+			children = (
+				03230D122CA2747C00544858 /* EmptyResponse.swift */,
+			);
+			path = EmptyResponse;
+			sourceTree = "<group>";
+		};
+		03230D142CA2748B00544858 /* NetworkLogger */ = {
+			isa = PBXGroup;
+			children = (
+				03230D152CA2749800544858 /* NetworkLogger.swift */,
+			);
+			path = NetworkLogger;
+			sourceTree = "<group>";
+		};
+		03230D172CA274A700544858 /* LocalFileReader */ = {
+			isa = PBXGroup;
+			children = (
+				03230D182CA274B400544858 /* LocalFileReader.swift */,
+			);
+			path = LocalFileReader;
+			sourceTree = "<group>";
+		};
+		03230D1A2CA274C900544858 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				03230D1B2CA274DB00544858 /* APIClient.swift */,
+				03230D1D2CA274EB00544858 /* HTTPClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		03B2FAFA2C94FADC00A9DA06 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				03B2FAFE2C94FB2800A9DA06 /* Service.swift */,
+				03230D212CA2763400544858 /* GlobalService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -88,6 +210,8 @@
 		3480C8582C9256F500462E4C /* TudoSobreCamadaDeNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				03230D012CA273A100544858 /* NewService */,
+				03230D002CA2739500544858 /* Documentation */,
 				03B2FAFB2C94FAE600A9DA06 /* Model */,
 				03B2FAFA2C94FADC00A9DA06 /* Service */,
 				3480C8592C9256F500462E4C /* AppDelegate.swift */,
@@ -174,13 +298,25 @@
 			files = (
 				3480C85E2C9256F500462E4C /* ViewController.swift in Sources */,
 				03B2FAFF2C94FB2800A9DA06 /* Service.swift in Sources */,
+				03230D0D2CA2744100544858 /* APIRequest.swift in Sources */,
+				03230D132CA2747C00544858 /* EmptyResponse.swift in Sources */,
 				03B2FB052C94FBBA00A9DA06 /* UserCreateResponse.swift in Sources */,
+				03230D072CA273FA00544858 /* HTTPMethod.swift in Sources */,
 				03B2FB032C94FBA100A9DA06 /* UserUpdateResponse.swift in Sources */,
 				03B2FB092C94FBDB00A9DA06 /* UserListDetail.swift in Sources */,
+				03230D222CA2763400544858 /* GlobalService.swift in Sources */,
+				03230D162CA2749800544858 /* NetworkLogger.swift in Sources */,
+				03230D102CA2745D00544858 /* RequestBuilder.swift in Sources */,
 				3480C85A2C9256F500462E4C /* AppDelegate.swift in Sources */,
 				03B2FB072C94FBCB00A9DA06 /* UserDetail.swift in Sources */,
+				03230D202CA2750300544858 /* Documentation.swift in Sources */,
 				03B2FB012C94FB8F00A9DA06 /* UpdateUserRequest.swift in Sources */,
 				3480C85C2C9256F500462E4C /* SceneDelegate.swift in Sources */,
+				03230D042CA273DD00544858 /* NetworkError.swift in Sources */,
+				03230D0A2CA2742000544858 /* Parameters.swift in Sources */,
+				03230D192CA274B400544858 /* LocalFileReader.swift in Sources */,
+				03230D1E2CA274EB00544858 /* HTTPClient.swift in Sources */,
+				03230D1C2CA274DB00544858 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
