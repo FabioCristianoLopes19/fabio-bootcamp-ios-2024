@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "56999BED-FB4F-4822-97B3-2D75ED6B9FAA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:PrimeiroProjetoUnitTest.xcodeproj",
+        "identifier" : "3460BF212CB755B900E9F1DA",
+        "name" : "PrimeiroProjetoUnitTestTests"
+      }
+    }
+  ],
+  "version" : 1
+}
