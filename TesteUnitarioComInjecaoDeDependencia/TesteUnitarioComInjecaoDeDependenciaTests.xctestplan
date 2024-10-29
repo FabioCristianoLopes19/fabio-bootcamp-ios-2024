@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "AF940C76-FEDD-4B31-B77B-70BD6ADD7972",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:TesteUnitarioComInjecaoDeDependencia.xcodeproj",
+        "identifier" : "345755762CB8A9E7000B46DD",
+        "name" : "TesteUnitarioComInjecaoDeDependenciaTests"
+      }
+    }
+  ],
+  "version" : 1
+}
