@@ -25,6 +25,13 @@ struct NotesView: View {
         }
       }
       .navigationTitle("Minhas notas")
+      .toolbar {
+        ToolbarItem(placement: .topBarTrailing) {
+          NavigationLink(destination: AddNoteView(viewModel: viewModel)) {
+            Text("Adicionar")
+          }
+        }
+      }
     }
   }
 }

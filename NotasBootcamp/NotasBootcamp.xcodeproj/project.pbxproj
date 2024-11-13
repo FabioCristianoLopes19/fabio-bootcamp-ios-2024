@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03D082AB2CE43B3500C48E38 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D082AA2CE43B3000C48E38 /* AddNoteView.swift */; };
 		34663C642CDC44DB001D76FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34663C5E2CDC44DB001D76FB /* Preview Assets.xcassets */; };
 		34663C652CDC44DB001D76FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34663C602CDC44DB001D76FB /* Assets.xcassets */; };
 		34663C662CDC44DB001D76FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34663C612CDC44DB001D76FB /* LoginView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03D082AA2CE43B3000C48E38 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		34663C4B2CDC439F001D76FB /* NotasBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotasBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34663C5E2CDC44DB001D76FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34663C602CDC44DB001D76FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03D082A92CE43B1E00C48E38 /* AddNoteView */ = {
+			isa = PBXGroup;
+			children = (
+				03D082AA2CE43B3000C48E38 /* AddNoteView.swift */,
+			);
+			path = AddNoteView;
+			sourceTree = "<group>";
+		};
 		34663C422CDC439F001D76FB = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		34663C632CDC44DB001D76FB /* NotasBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				03D082A92CE43B1E00C48E38 /* AddNoteView */,
 				34663C752CDC52A4001D76FB /* NoteDetailView */,
 				34663C702CDC4C47001D76FB /* Model */,
 				34663C6D2CDC4BF4001D76FB /* Notes */,
@@ -205,6 +216,7 @@
 			files = (
 				34663C722CDC4C4E001D76FB /* Note.swift in Sources */,
 				34663C662CDC44DB001D76FB /* LoginView.swift in Sources */,
+				03D082AB2CE43B3500C48E38 /* AddNoteView.swift in Sources */,
 				34663C742CDC4D41001D76FB /* NoteViewModel.swift in Sources */,
 				34663C6C2CDC44FA001D76FB /* Color+Extension.swift in Sources */,
 				34663C6F2CDC4C02001D76FB /* NotesView.swift in Sources */,

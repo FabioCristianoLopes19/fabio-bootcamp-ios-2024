@@ -15,13 +15,19 @@ import Foundation
 // @Published é utilizado para notificar mudanças em propriedades de um ObservableObject.
 
 class NoteViewModel: ObservableObject {
+  @Published var notes: [Note] = [] {
+    didSet {
+      saveNotes()
+    }
+  }
 
-  @Published var notes: [Note] = [
-    Note(title: "Teste 1", content: "conteudo 1"),
-    Note(title: "Teste 2", content: "conteudo 2"),
-    Note(title: "Teste 3", content: "conteudo 3"),
-    Note(title: "Teste 4", content: "conteudo 4")
-  ]
+  init() {
+    guard let data = UserDefaults.standard.data(forKey: "notes"),
+          let list = try? JSONDecoder().decode([Note].self, from: data) else { return }
+    notes = list
+  }
 
-
+  func saveNotes() {
+    UserDefaults.standard.set(try? JSONEncoder().encode(notes), forKey: "notes")
+  }
 }
